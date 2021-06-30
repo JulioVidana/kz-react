@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     pageContent: {
         paddingTop: theme.spacing(3)
     }
-}));
+}))
 
 const suma = (dato) => {
     let acum = {}
@@ -33,7 +33,7 @@ const suma = (dato) => {
         }
     )
     return acum
-};
+}
 
 const EncuestaDetalle = () => {
     const classes = useStyles();

@@ -53,7 +53,7 @@ export const obtenerLlamadasAccion = (Encuesta) => async (dispatch, getState) =>
     dispatch({ type: LOADING })
     //console.log(Encuesta)
     try {
-        await Axios.post(`${host}/encuestasglobal/llamadas`, Encuesta)
+        await Axios.get(`${host}/encuestasglobal/llamadas/${Encuesta._id}`)
             .then(res => {
                 dispatch({ type: OBTENER_LLAMADAS, payload: res.data })
                 Axios.post(`${host}/encuestasglobal/nocontesto`, Encuesta)
